@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('assets/font/font1.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="slideshow-container" class="slideshow-container">
+        <div id="slideshow-image" class="slideshow-image"></div>
+    </div>
+    <div class="top-bar">
+        <button id="music-toggle" class="music-toggle" title="Background Music">🎵</button>
+        <button id="color-picker-toggle" class="color-picker-toggle" title="Theme Colors">🎨</button>
+        <div id="color-table-panel" class="color-table-panel" style="display:none;">
+            <div class="color-table-header">Theme Colors</div>
+            <div class="color-table-grid">
+                <div class="color-cell" data-color="#e57373" title="Red"></div>
+                <div class="color-cell" data-color="#ffe066" title="Yellow"></div>
+                <div class="color-cell" data-color="#81c784" title="Green"></div>
+                <div class="color-cell" data-color="#fff9c4" title="Pastel Yellow"></div>
+                <div class="color-cell" data-color="#b3e5fc" title="Pastel Blue"></div>
+                <div class="color-cell" data-color="#d1c4e9" title="Lilac"></div>
+                <div class="color-cell" data-color="#222831" title="Dark Gray"></div>
+                <div class="color-cell" data-color="#ffffff" title="White"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer-display" id="timer-display">25:00</div>
+        <div class="controls">
+            <button id="start-btn">Start</button>
+            <button id="pause-btn">Pause</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <div class="customization">
+            <label>
+                Pomodoro (minutes):
+                <input type="number" id="pomodoro-duration" min="1" max="60" value="25">
+            </label>
+            <label>
+                Break (minutes):
+                <input type="number" id="break-duration" min="1" max="30" value="5">
+            </label>
+        </div>
+    </div>
+    <audio id="audio-default" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfa1c82.mp3" preload="auto"></audio>
+    <audio id="audio-beep" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9b7bfa.mp3" preload="auto"></audio>
+    <audio id="audio-bell" src="assets/alarm1.mp3" preload="auto"></audio>
+    <audio id="background-music" src="assets/music/asmr_summer_piano.mp3" preload="auto" loop></audio>
+    <script src="js/script.js"></script>
+</body>
+</html>
